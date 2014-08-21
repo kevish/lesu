@@ -165,7 +165,7 @@ var boroughs = L.geoJson(null, {
                 boroughs.resetStyle(e.target);
             },
             click: function (e) {
-                window.open('completesurv/' + feature.properties.NAME + '.html');
+                window.open('https://github.com/kevish/lesu/blob/master/completesurv/' + feature.properties.NAME + '+.pdf?raw=true');
             }
         }).bindLabel(feature.properties.NAME);
         /*onEachFeature: function (feature, layer) {
