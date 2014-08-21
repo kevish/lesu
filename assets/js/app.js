@@ -189,7 +189,7 @@ var negshoveltests = L.geoJson(null, {
             opacity: 1,
             fillOpacity:.77,
             weight: 1,
-            clickable: true
+            clickable: false
         };
     },
     onEachFeature: function (feature, layer) {
