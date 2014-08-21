@@ -126,7 +126,7 @@ var activityareas = L.geoJson(null, {
                 activityareas.resetStyle(e.target);
             },
             click: function (e) {
-                window.open('/completesurv/' + feature.properties.name + '.pdf');
+                window.open('completesurv/' + feature.properties.name + '.pdf');
             }
         }).bindLabel(feature.properties.name);
         /*boroughSearch.push({
@@ -165,7 +165,7 @@ var boroughs = L.geoJson(null, {
                 boroughs.resetStyle(e.target);
             },
             click: function (e) {
-                window.open('/completesurv/' + feature.properties.NAME + '.html');
+                window.open('completesurv/' + feature.properties.NAME + '.html');
             }
         }).bindLabel(feature.properties.NAME);
         /*onEachFeature: function (feature, layer) {
