@@ -165,7 +165,7 @@ var boroughs = L.geoJson(null, {
                 boroughs.resetStyle(e.target);
             },
             click: function (e) {
-                window.open('file:///C:/projects/bootleaf-master/bootleaf-master/Completed_Surveys-2014-06-16/Completed%20Surveys/' + feature.properties.NAME + '.html');
+                window.open('/completesurv/' + feature.properties.NAME + '.html');
             }
         }).bindLabel(feature.properties.NAME);
         /*onEachFeature: function (feature, layer) {
