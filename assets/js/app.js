@@ -126,7 +126,7 @@ var activityareas = L.geoJson(null, {
                 activityareas.resetStyle(e.target);
             },
             click: function (e) {
-                window.open('file:///C:/projects/bootleaf-master/bootleaf-master/Completed_Surveys-2014-06-16/Completed%20Surveys/' + feature.properties.name + '.pdf');
+                window.open('/completesurv' + feature.properties.name + '.pdf');
             }
         }).bindLabel(feature.properties.name);
         /*boroughSearch.push({
