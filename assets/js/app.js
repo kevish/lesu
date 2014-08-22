@@ -183,12 +183,13 @@ $.getJSON("data/boroughs.geojson", function (data) {
 var county = L.geoJson(null, {
     style: function (feature) {
         return {
-            color: "black",
-            fillColor: "#ab070d",
-            fillOpacity:.5,
-            opacity: 2,
+            color: '#D11919',
+            fillColor: "#000000",
+            dashArray: '10,7',
+            fillOpacity:.05,
+            opacity: 1,
             weight: 1.2
-}}});
+    };}});
 $.getJSON("data/county.geojson", function (data) {
     county.addData(data);
 });
@@ -631,7 +632,8 @@ var groupedOverlays = {
     "Activity Areas": activityareas,
     "Surface Collections": surfacecollection,
     "Positive Shovel Tests": posshoveltests,
-    "Negative Shovel Tests": negshoveltests
+    "Negative Shovel Tests": negshoveltests,
+    "county": county
   }
 };
 
