@@ -180,6 +180,18 @@ var boroughs = L.geoJson(null, {
 $.getJSON("data/boroughs.geojson", function (data) {
     boroughs.addData(data);
 });
+var county = L.geoJson(null, {
+    style: function (feature) {
+        return {
+            color: "black",
+            fillColor: "#ab070d",
+            fillOpacity:.5,
+            opacity: 2,
+            weight: 1.2
+}}});
+$.getJSON("data/county.geojson", function (data) {
+    county.addData(data);
+});
 
 var negshoveltests = L.geoJson(null, {
     style: function (feature) {
@@ -522,7 +534,7 @@ $.getJSON("data/artifacts.geojson", function (data) {
 map = L.map("map", {
   zoom: 10,
   center: [40.702222, -73.979378],
-  layers: [mapquestOAM, boroughs, markerClusters, activityareas, surfacecollection, posshoveltests, negshoveltests],
+  layers: [mapquestOAM, boroughs, markerClusters, activityareas, surfacecollection, posshoveltests, negshoveltests, county],
   zoomControl: false,
   attributionControl: false
 });
